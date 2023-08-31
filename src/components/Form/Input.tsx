@@ -28,7 +28,7 @@ const Input: FunctionComponent<Props> = ({
         <input
           id={id}
           {...props}
-          className="border border-[#828282] rounded-xl h-14 pl-[3.25rem] w-full"
+          className="border border-[#828282] rounded-xl h-14 px-[3.25rem] w-full"
           type={type ?? "text"}
         />
       </div>

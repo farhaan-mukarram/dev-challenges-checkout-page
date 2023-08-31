@@ -6,6 +6,7 @@ import cityIcon from "../../assets/icons/city.svg";
 import emailIcon from "../../assets/icons/email.svg";
 import houseIcon from "../../assets/icons/home.svg";
 import mailboxIcon from "../../assets/icons/mailbox.svg";
+import globeIcon from "../../assets/icons/globe.svg";
 
 const Main = () => {
   return (
@@ -66,17 +67,25 @@ const Main = () => {
                     <label className="text-xs text-[#4F4F4F]" htmlFor="country">
                       Country
                     </label>
-                    <select
-                      className="border border-[#828282] rounded-xl h-14 pl-3"
-                      name="country"
-                      id="country"
-                      placeholder="Your country..."
-                    >
-                      <option value="">Your Country...</option>
-                      <option value="countryA">Country A</option>
-                      <option value="countryB">Country B</option>
-                      <option value="countryC">Country C</option>
-                    </select>
+
+                    <div className="relative flex w-full">
+                      <img
+                        src={globeIcon}
+                        alt=""
+                        className="absolute top-0 bottom-0 my-auto pointer-events-none left-4"
+                      />
+                      <select
+                        className="border border-[#828282] rounded-xl h-14 px-[3.25rem] bg-white"
+                        name="country"
+                        id="country"
+                        placeholder="Your country..."
+                      >
+                        <option value="">Your Country...</option>
+                        <option value="countryA">Country A</option>
+                        <option value="countryB">Country B</option>
+                        <option value="countryC">Country C</option>
+                      </select>
+                    </div>
                   </div>
 
                   <Input
