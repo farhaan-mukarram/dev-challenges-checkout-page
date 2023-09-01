@@ -7,6 +7,13 @@ import emailIcon from "../../assets/icons/email.svg";
 import houseIcon from "../../assets/icons/home.svg";
 import mailboxIcon from "../../assets/icons/mailbox.svg";
 import globeIcon from "../../assets/icons/globe.svg";
+import Select from "../Form/Select";
+
+const countryOptions = [
+  { value: "CountryA", label: "Country A" },
+  { value: "CountryB", label: "Country B" },
+  { value: "CountryC", label: "Country C" },
+];
 
 const Main = () => {
   return (
@@ -63,30 +70,13 @@ const Main = () => {
                 />
 
                 <div className="flex space-x-8">
-                  <div className="flex flex-col space-y-2">
-                    <label className="text-xs text-[#4F4F4F]" htmlFor="country">
-                      Country
-                    </label>
-
-                    <div className="relative flex w-full">
-                      <img
-                        src={globeIcon}
-                        alt=""
-                        className="absolute top-0 bottom-0 my-auto pointer-events-none left-4"
-                      />
-                      <select
-                        className="border border-[#828282] rounded-xl h-14 px-[3.25rem] bg-white"
-                        name="country"
-                        id="country"
-                        placeholder="Your country..."
-                      >
-                        <option value="">Your Country...</option>
-                        <option value="countryA">Country A</option>
-                        <option value="countryB">Country B</option>
-                        <option value="countryC">Country C</option>
-                      </select>
-                    </div>
-                  </div>
+                  <Select
+                    id="country"
+                    placeholder="Your country..."
+                    label="Country"
+                    options={countryOptions}
+                    startIcon={globeIcon}
+                  />
 
                   <Input
                     id="postalCode"
