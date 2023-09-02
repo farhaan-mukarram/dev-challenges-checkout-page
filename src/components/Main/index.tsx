@@ -1,5 +1,3 @@
-import Input from "../Form/Input";
-
 import avatarIcon from "../../assets/icons/avatar.svg";
 import phoneIcon from "../../assets/icons/call.svg";
 import cityIcon from "../../assets/icons/city.svg";
@@ -7,7 +5,10 @@ import emailIcon from "../../assets/icons/email.svg";
 import houseIcon from "../../assets/icons/home.svg";
 import mailboxIcon from "../../assets/icons/mailbox.svg";
 import globeIcon from "../../assets/icons/globe.svg";
+
+import Input from "../Form/Input";
 import Select from "../Form/Select";
+import CheckoutCard from "../CheckoutCard";
 
 const countryOptions = [
   { value: "CountryA", label: "Country A" },
@@ -104,7 +105,7 @@ const Main = () => {
           />
         </form>
 
-        <section className="bg-[#040303] rounded-xl p-8"></section>
+        <CheckoutCard />
       </section>
     </main>
   );
