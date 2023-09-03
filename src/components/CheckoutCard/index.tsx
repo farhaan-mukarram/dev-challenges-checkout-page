@@ -15,8 +15,8 @@ const CheckoutCard = () => {
             className="w-32 h-full rounded-xl"
           />
 
-          <div className="flex flex-col w-full space-y-9">
-            <div className="flex flex-col space-y-3">
+          <div className="flex flex-col justify-between w-full">
+            <div className="flex flex-col space-y-2">
               <h4 className="text-base text-[#4E5150]">Vintage Backpack</h4>
               <p>
                 <span className="text-[#F2994A]">$54.99</span>{" "}
@@ -40,8 +40,8 @@ const CheckoutCard = () => {
         <div className="flex space-x-5">
           <img src={leviShoesPhoto} alt="" className="w-32 h-full rounded-xl" />
 
-          <div className="flex flex-col w-full space-y-9">
-            <div className="flex flex-col space-y-3">
+          <div className="flex flex-col justify-between w-full">
+            <div className="flex flex-col space-y-2">
               <h4 className="text-base text-[#4E5150]">Levi Shoes</h4>
               <p>
                 <span className="text-[#F2994A]">$74.99</span>{" "}
@@ -66,14 +66,14 @@ const CheckoutCard = () => {
       <div className="flex flex-col space-y-4">
         <div className="flex flex-col space-y-2">
           <hr className="border-[#BDBDBD]" />
-          <div className="flex justify-between">
+          <div className="flex justify-between text-lg text-[#333333]">
             <p>Shipping</p>
             <p>$19</p>
           </div>
           <hr className="border-[#BDBDBD]" />
         </div>
 
-        <div className="flex justify-between">
+        <div className="flex justify-between text-lg text-[#333333]">
           <p>Total</p>
           <p>$148.98</p>
         </div>
