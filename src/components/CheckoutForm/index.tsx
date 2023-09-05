@@ -28,14 +28,19 @@ const CheckoutForm = () => {
               label="E-mail"
               placeholder="Enter your email..."
               startIcon={emailIcon}
+              required
+              type="email"
             />
 
             <Input
               id="phone"
-              label="Phone"
+              label="Phone (15 digits max.)"
               placeholder="Enter your phone..."
               type="tel"
               startIcon={phoneIcon}
+              required
+              pattern="\d+"
+              maxLength={15}
             />
           </div>
         </section>
@@ -49,6 +54,7 @@ const CheckoutForm = () => {
               label="Full name"
               placeholder="Your fullname..."
               startIcon={avatarIcon}
+              required
             />
 
             <Input
@@ -56,6 +62,7 @@ const CheckoutForm = () => {
               label="Address"
               placeholder="Your address..."
               startIcon={houseIcon}
+              required
             />
 
             <Input
@@ -63,6 +70,7 @@ const CheckoutForm = () => {
               label="City"
               placeholder="Your city..."
               startIcon={cityIcon}
+              required
             />
 
             <div className="flex space-x-8">
@@ -79,6 +87,7 @@ const CheckoutForm = () => {
                 label="Postal code"
                 placeholder="Your postal code..."
                 startIcon={mailboxIcon}
+                required
               />
             </div>
           </div>
@@ -86,7 +95,7 @@ const CheckoutForm = () => {
       </div>
 
       <div className="flex mt-6 space-x-3">
-        <input type="checkbox" name="saveInfo" id="saveInfo" />
+        <input type="checkbox" name="saveInfo" id="saveInfo" required />
         <p className="text-[#4F4F4F] text-xs">
           Save this information for next time
         </p>
@@ -95,7 +104,6 @@ const CheckoutForm = () => {
       <input
         type="submit"
         value="Continue"
-        onClick={(event) => event.preventDefault()}
         className="bg-[#F2994A] text-white py-4 px-11 max-w-fit self-end rounded-xl cursor-pointer hover:opacity-80"
       />
     </form>
