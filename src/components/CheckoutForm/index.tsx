@@ -1,3 +1,5 @@
+import { FormEvent } from "react";
+
 import Input from "./Input";
 import Select from "./Select";
 
@@ -16,8 +18,13 @@ const countryOptions = [
 ];
 
 const CheckoutForm = () => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    alert("Validation successful!");
+  };
+
   return (
-    <form action="" className="flex flex-col space-y-6">
+    <form action="" className="flex flex-col space-y-6" onSubmit={handleSubmit}>
       <div className="flex flex-col space-y-10">
         <section className="flex flex-col space-y-4">
           <h2 className="text-lg text-[#333333]">Contact Information</h2>
