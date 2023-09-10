@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 import vintageBackpackPhoto from "../../assets/images/photo1.png";
 import leviShoesPhoto from "../../assets/images/photo2.png";
@@ -9,8 +9,8 @@ import removeIcon from "../../assets/icons/remove.svg";
 type CartItemType = {
   id: number;
   title: string;
-  unitPrice: string | number;
-  discountedUnitPrice: string | number;
+  unitPrice: number;
+  discountedUnitPrice: number;
   image: string;
   quantity: number;
 };
@@ -19,20 +19,22 @@ const DEFAULT_CART_ITEMS: Array<CartItemType> = [
   {
     id: 1,
     title: "Vintage Backpack",
-    unitPrice: "$94.99",
-    discountedUnitPrice: "$54.99",
+    unitPrice: 94.99,
+    discountedUnitPrice: 54.99,
     image: vintageBackpackPhoto,
     quantity: 1,
   },
   {
     id: 2,
     title: "Levi Shoes",
-    unitPrice: "$124.99",
-    discountedUnitPrice: "$74.99",
+    unitPrice: 124.99,
+    discountedUnitPrice: 74.99,
     image: leviShoesPhoto,
     quantity: 1,
   },
 ];
+
+const SHIPPING_COST = 19;
 
 const CheckoutCard = () => {
   const [cartItems, setCartItems] =
@@ -79,6 +81,16 @@ const CheckoutCard = () => {
       return updatedCartItems;
     });
   };
+
+  const totalCost = useMemo(() => {
+    const totalCost = cartItems.reduce(
+      (acc, currentValue) =>
+        acc + currentValue.quantity * currentValue.discountedUnitPrice,
+      0
+    );
+
+    return totalCost + SHIPPING_COST;
+  }, [cartItems]);
 
   return (
     <section className="bg-[#F2F2F2] p-8 rounded-xl h-max space-y-24">
@@ -135,7 +147,7 @@ const CheckoutCard = () => {
 
         <div className="flex justify-between text-lg text-[#333333]">
           <p>Total</p>
-          <p>$148.98</p>
+          <p>{totalCost}</p>
         </div>
       </div>
     </section>
