@@ -89,7 +89,7 @@ const CheckoutCard = () => {
       0
     );
 
-    return totalCost + SHIPPING_COST;
+    return Number(totalCost + SHIPPING_COST).toFixed(2);
   }, [cartItems]);
 
   return (
