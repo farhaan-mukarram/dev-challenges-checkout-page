@@ -116,7 +116,6 @@ const CheckoutCard = () => {
                 <div className="flex justify-between p-3 border border-[#828282] rounded-xl">
                   <button
                     className="w-6 h-6"
-                    // eslint-disable-next-line @typescript-eslint/no-unused-vars
                     onClick={() => decreaseItemQuantity(id)}
                   >
                     <img src={removeIcon} alt="" />
