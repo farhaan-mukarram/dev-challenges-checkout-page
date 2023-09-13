@@ -105,10 +105,10 @@ const CheckoutCard = () => {
                   <h4 className="text-base text-[#4E5150]">{title}</h4>
                   <p>
                     <span className="text-[#F2994A]">
-                      {discountedUnitPrice}
+                      ${discountedUnitPrice}
                     </span>{" "}
                     <span className="line-through text-xs text-[#4E5150]">
-                      {unitPrice}
+                      ${unitPrice}
                     </span>
                   </p>
                 </div>
@@ -146,7 +146,7 @@ const CheckoutCard = () => {
 
         <div className="flex justify-between text-lg text-[#333333]">
           <p>Total</p>
-          <p>{totalCost}</p>
+          <p>${totalCost}</p>
         </div>
       </div>
     </section>
