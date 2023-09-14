@@ -118,14 +118,14 @@ const CheckoutCard = () => {
                     className="w-6 h-6"
                     onClick={() => decreaseItemQuantity(id)}
                   >
-                    <img src={removeIcon} alt="" />
+                    <img src={removeIcon} alt="Decrease item quantity" />
                   </button>
                   <div>{quantity}</div>
                   <button
                     className="w-6 h-6"
                     onClick={() => increaseItemQuantity(id)}
                   >
-                    <img src={addIcon} alt="" />
+                    <img src={addIcon} alt="Increase item quantity" />
                   </button>
                 </div>
               </div>
