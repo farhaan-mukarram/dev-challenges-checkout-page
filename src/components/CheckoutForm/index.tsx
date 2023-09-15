@@ -27,7 +27,9 @@ const CheckoutForm = () => {
     <form action="" className="flex flex-col space-y-6" onSubmit={handleSubmit}>
       <div className="flex flex-col space-y-10">
         <section className="flex flex-col space-y-4">
-          <h2 className="text-lg text-[#333333]">Contact Information</h2>
+          <h2 className="text-sm lg:text-lg text-[#333333]">
+            Contact Information
+          </h2>
 
           <div className="flex flex-col space-y-5">
             <Input
@@ -53,7 +55,9 @@ const CheckoutForm = () => {
         </section>
 
         <section className="flex flex-col space-y-4">
-          <h2 className="text-lg text-[#333333]">Shipping Address</h2>
+          <h2 className="text-sm lg:text-lg text-[#333333]">
+            Shipping Address
+          </h2>
 
           <div className="flex flex-col space-y-5">
             <Input
@@ -80,7 +84,7 @@ const CheckoutForm = () => {
               required
             />
 
-            <div className="flex space-x-8">
+            <div className="flex flex-col space-y-5 lg:space-x-8 lg:space-y-0 lg:flex-row">
               <Select
                 id="country"
                 placeholder="Your country..."
@@ -103,7 +107,7 @@ const CheckoutForm = () => {
 
       <div className="flex mt-6 space-x-3">
         <input type="checkbox" name="saveInfo" id="saveInfo" required />
-        <p className="text-[#4F4F4F] text-xs">
+        <p className="text-[#4F4F4F] text-[0.625rem] lg:text-xs">
           Save this information for next time
         </p>
       </div>

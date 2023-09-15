@@ -16,8 +16,8 @@ const Select: FunctionComponent<Props> = ({
   ...props
 }) => {
   return (
-    <div className="flex flex-col space-y-2">
-      <label className="text-xs text-[#4F4F4F]" htmlFor={id}>
+    <div className="flex flex-col w-full space-y-2">
+      <label className="text-[0.625rem] lg:text-xs text-[#4F4F4F]" htmlFor={id}>
         {label}
       </label>
 
@@ -28,7 +28,7 @@ const Select: FunctionComponent<Props> = ({
           className="absolute top-0 bottom-0 my-auto pointer-events-none left-4"
         />
         <select
-          className="border border-[#828282] rounded-xl h-14 px-[3.25rem] bg-white"
+          className="border border-[#828282] rounded-xl h-14 px-[3.25rem] bg-white w-full text-xs lg:text-base"
           id={id}
           {...props}
         >

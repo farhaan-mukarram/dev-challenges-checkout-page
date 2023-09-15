@@ -93,7 +93,7 @@ const CheckoutCard = () => {
   }, [cartItems]);
 
   return (
-    <section className="bg-[#F2F2F2] p-8 rounded-xl h-max space-y-24">
+    <section className="bg-[#F2F2F2] p-4 lg:p-8 rounded-xl h-max space-y-24">
       <div className="flex flex-col space-y-8">
         {cartItems.map(
           ({ id, title, unitPrice, discountedUnitPrice, image, quantity }) => (
@@ -102,12 +102,15 @@ const CheckoutCard = () => {
 
               <div className="flex flex-col justify-between w-full">
                 <div className="flex flex-col space-y-2">
-                  <h4 className="text-base text-[#4E5150]">{title}</h4>
+                  <h4 className="text-xs lg:text-base text-[#4E5150]">
+                    {title}
+                  </h4>
+
                   <p>
-                    <span className="text-[#F2994A]">
+                    <span className="text-sm lg:text-base text-[#F2994A]">
                       ${discountedUnitPrice}
                     </span>{" "}
-                    <span className="line-through text-xs text-[#4E5150]">
+                    <span className="line-through text-[0.625rem] lg:text-xs text-[#4E5150]">
                       ${unitPrice}
                     </span>
                   </p>
@@ -137,14 +140,14 @@ const CheckoutCard = () => {
       <div className="flex flex-col space-y-4">
         <div className="flex flex-col space-y-2">
           <hr className="border-[#BDBDBD]" />
-          <div className="flex justify-between text-lg text-[#333333]">
+          <div className="flex justify-between text-sm lg:text-lg text-[#333333]">
             <p>Shipping</p>
             <p>$19</p>
           </div>
           <hr className="border-[#BDBDBD]" />
         </div>
 
-        <div className="flex justify-between text-lg text-[#333333]">
+        <div className="flex justify-between text-sm lg:text-lg text-[#333333]">
           <p>Total</p>
           <p>${totalCost}</p>
         </div>
